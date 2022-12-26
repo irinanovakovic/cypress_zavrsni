@@ -9,5 +9,13 @@ describe('board page',() => {
     it('Add board',()=> {
         cy.visit('/my-organizations')
         cy.get(locators.board.addNewBoard).click()
+        cy.get(locators.board.inputTitle).type('my test board')
+        cy.get(locators.board.nextBtn).click()
+        cy.get(locators.board.kanabaOption).click()
+        cy.get(locators.board.nextBtn).click()
+        cy.get(locators.board.nextBtn).click()
+        cy.get(locators.board.nextBtn).click()
+        cy.get(locators.board.finishBtn).click()
+
     })
 })
